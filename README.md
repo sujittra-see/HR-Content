@@ -12,7 +12,7 @@ SITE_URL="https://your-production-domain.com" npm run build
 
 ## GitHub Pages
 
-This project includes `.github/workflows/deploy.yml` for GitHub Pages using Astro's official GitHub Action.
+This project includes `.github/workflows/static.yml` for GitHub Pages using Astro's static build output.
 
 1. Push the repository to GitHub.
 2. In GitHub, go to `Settings` -> `Pages`.
