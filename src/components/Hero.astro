@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+import Icon from "./Icon.astro";
+import { getImage } from "../lib/images";
+---
+
+<section id="hero" aria-labelledby="hero-heading">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-glow-1" aria-hidden="true"></div>
+    <div class="hero-glow-2" aria-hidden="true"></div>
+
+    <div class="hero-wrapper">
+      <div class="hero-left">
+        <div class="hero-glass-card">
+          <div>
+            <div class="hero-roles">
+              Human Resources<br>
+              Content Creator
+            </div>
+            <h1 id="hero-heading" class="hero-greeting">Hello,<br>I'm Eve</h1>
+            <div class="hero-name">Sujittra Seelabat</div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="https://drive.google.com/file/d/10tDVxCA2E7Yufn4UjxNMfckL9cQNFxK8/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              <Icon name="download" size={14} />
+              Resume
+            </a>
+            <a href="#about" class="btn-ghost">
+              About Me
+              <Icon name="arrow-down" size={14} />
+            </a>
+          </div>
+
+          <div class="card-availability">
+            <span class="avail-dot"></span>
+            Open to opportunities
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="float-card float-card-1">
+          <div class="float-label">Status</div>
+          <div class="float-value">Open to Work</div>
+        </div>
+        <div class="float-card float-card-2">
+          <div class="float-label">Location</div>
+          <div class="float-value">Khon Kaen, Thailand</div>
+        </div>
+
+        <div class="hero-glow-photo" aria-hidden="true"></div>
+        <Image
+          src={getImage("IMG_2598-Photoroom-1.png")}
+          alt="Eve Sujittra Seelabat"
+          class="hero-person-img"
+          loading="eager"
+          fetchpriority="high"
+          widths={[320, 480, 640, 777]}
+          sizes="(max-width: 768px) 72vw, 38vw"
+        />
+      </div>
+    </div>
+  </section>

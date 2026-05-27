@@ -1,0 +1,173 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-left">
+    <a href="#hero" class="nav-logo" aria-label="Eve.SS portfolio home">
+      <svg class="logo" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5"
+        ></path>
+      </svg>
+      <span class="nav-logo-text">Eve.SS</span>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#portfolio">Experience</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+    </ul>
+  </div>
+
+  <div class="navbar-right">
+    <a href="#contact" class="nav-cta">
+      <Icon name="mail" size={14} />
+      Contact Me
+    </a>
+    <button
+      class="hamburger"
+      id="hamburger"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div
+  class="mobile-menu"
+  id="mobile-menu"
+  role="navigation"
+  aria-label="Mobile navigation"
+>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#portfolio">Experience</a>
+  <a href="#certificates">Certificates</a>
+  <a href="#contact" class="mobile-cta">Contact Me</a>
+</div>
+
+<script>
+  const initNavigation = () => {
+    const navbar = document.querySelector(".navbar");
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (!hamburger || !mobileMenu) return;
+
+    const closeMobile = () => {
+      mobileMenu.classList.remove("open");
+      hamburger.classList.remove("open");
+      hamburger.setAttribute("aria-expanded", "false");
+    };
+
+    hamburger.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("open");
+      hamburger.classList.toggle("open", isOpen);
+      hamburger.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMobile);
+    });
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    );
+    const anchorLinks = document.querySelectorAll(
+      'a[href^="#"]:not([href="#"])'
+    );
+    const defaultFocusGap = 20;
+
+    anchorLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        const hash = link.getAttribute("href");
+        if (!hash) return;
+
+        const target = document.getElementById(hash.slice(1));
+        if (!target || target.tagName.toLowerCase() !== "section") return;
+
+        event.preventDefault();
+        closeMobile();
+
+        const focusTarget =
+          target.querySelector(".section-label, .section-title") ?? target;
+        const focusGap =
+          Number((target as HTMLElement).dataset.focusGap) || defaultFocusGap;
+        const navBottom = navbar?.getBoundingClientRect().bottom ?? 0;
+        const focusTop =
+          focusTarget.getBoundingClientRect().top + window.scrollY;
+        const defaultScrollTop = Math.max(0, focusTop - navBottom - focusGap);
+        const maxScrollTop =
+          document.documentElement.scrollHeight - window.innerHeight;
+        let scrollTop = defaultScrollTop;
+
+        if (target.id === "contact") {
+          const footer = document.querySelector("footer");
+          const contactContent =
+            target.querySelector(".contact-grid") ?? target;
+          const contentBottom =
+            contactContent.getBoundingClientRect().bottom + window.scrollY;
+          const footerTop =
+            footer?.getBoundingClientRect().top ?? window.innerHeight;
+          const footerClearScrollTop =
+            contentBottom - Math.max(0, footerTop);
+          const footerAwareScrollTop = Math.max(
+            defaultScrollTop,
+            footerClearScrollTop
+          );
+          const focusTopAtFooterAware =
+            focusTop - footerAwareScrollTop - navBottom;
+
+          scrollTop =
+            focusTopAtFooterAware >= focusGap
+              ? footerAwareScrollTop
+              : defaultScrollTop;
+        }
+
+        scrollTop = Math.min(maxScrollTop, scrollTop);
+
+        window.scrollTo({
+          top: scrollTop,
+          behavior: prefersReducedMotion.matches ? "auto" : "smooth",
+        });
+        history.pushState(null, "", hash);
+      });
+    });
+
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(
+      ".nav-links a, .nav-cta, .mobile-menu a"
+    );
+    const titles = document.querySelectorAll(".section-title");
+
+    const onScroll = () => {
+      let current = "";
+      const activationLine = window.scrollY + window.innerHeight * 0.6;
+      sections.forEach((section) => {
+        if (activationLine >= (section as HTMLElement).offsetTop)
+          current = section.id;
+      });
+      navLinks.forEach((link) => {
+        link.classList.toggle(
+          "active",
+          link.getAttribute("href") === "#" + current
+        );
+      });
+      titles.forEach((title) => {
+        title.classList.toggle(
+          "active",
+          title.closest("section")?.id === current
+        );
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("load", onScroll);
+    onScroll();
+  };
+
+  initNavigation();
+</script>

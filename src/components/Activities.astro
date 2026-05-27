@@ -1,0 +1,661 @@
+---
+import { Image } from "astro:assets";
+import Icon from "./Icon.astro";
+import { getImage } from "../lib/images";
+---
+
+<section id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-header fade-in">
+        <div class="section-label">About Me</div>
+        <h2 id="about-heading" class="section-title">Personal <em>Profile</em></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-wrapper fade-in">
+          <div class="about-main-glass">
+            <Image src={getImage("IMG_2598-Photoroom-1.png")} alt="Eve Sujittra Seelabat" class="about-profile-img" />
+            <div class="about-inner-card">
+              <div class="about-card-title">Portfolio</div>
+              <div class="about-card-name">Sujittra Seelabat</div>
+              <div class="about-card-role">Human Resources & Content Creator</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content fade-in">
+          <p class="about-body">
+            I am a fourth-year Bachelor of Information Science student at Khon Kaen University, and I am interested in
+            Human Resources. I want to work as an HR Content Creator in Talent Acquisition. My background is in digital
+            media, UX/UI, and graphic design, and I always focus on user-centered design.
+          </p>
+          <p class="about-body" style="margin-bottom: var(--space-8);">
+            Before making any graphic or content, I always analyze the audience's experience, current trends, and what
+            they need. I believe that in the HR world, candidates and employees are our most important "users." I want
+            to
+            use my design skills and audience insights to create digital content that strengthens employer branding. I
+            am
+            ready to support the team to make the hiring process more modern and easier for everyone.
+          </p>
+
+          <div class="about-values">
+            <div class="value-item">
+              <div class="value-icon"><Icon name="users" size={18} /></div>
+              <div class="value-text">
+                <h3>People First</h3>
+                <p>Every initiative starts with humans at the center</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon"><Icon name="pen-tool" size={18} /></div>
+              <div class="value-text">
+                <h3>Creative Storytelling</h3>
+                <p>Turning ideas into compelling content</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon"><Icon name="trending-up" size={18} /></div>
+              <div class="value-text">
+                <h3>Growth Mindset</h3>
+                <p>Continuous learning drives everything I do</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon"><Icon name="heart" size={18} /></div>
+              <div class="value-text">
+                <h3>Authentic Culture</h3>
+                <p>Building workplaces people genuinely love</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn-primary" style="display:inline-flex;">
+            <Icon name="message-circle" size={16} />
+            Let's Connect
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" aria-labelledby="skills-heading">
+    <div class="container">
+      <div class="fade-in" style="margin-bottom: var(--space-10); max-width: var(--content-default);">
+        <div class="section-label">Skills</div>
+        <h2 id="skills-heading" class="section-title">Skills &<br><em>Expertise</em></h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card fade-in">
+          <div class="skill-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+              <circle cx="12" cy="13" r="4" />
+            </svg>
+          </div>
+          <h3>Photography</h3>
+          <p>Basic proficiency in Nikon & Sony cameras, capable of fundamental composition techniques.</p>
+        </div>
+        <div class="skill-card fade-in">
+          <div class="skill-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+          </div>
+          <h3>Photo Editing</h3>
+          <p>Specialized in Nikon & Sony RAW color grading with a strict focus on precise tones and high-quality
+            output.</p>
+        </div>
+        <div class="skill-card fade-in">
+          <div class="skill-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7" />
+              <rect x="14" y="3" width="7" height="7" />
+              <rect x="14" y="14" width="7" height="7" />
+              <rect x="3" y="14" width="7" height="7" />
+            </svg>
+          </div>
+          <h3>UX/UI Design</h3>
+          <p>User-centered interface design with Figma prototyping.</p>
+        </div>
+        <div class="skill-card fade-in">
+          <div class="skill-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10" />
+              <line x1="12" y1="20" x2="12" y2="4" />
+              <line x1="6" y1="20" x2="6" y2="14" />
+            </svg>
+          </div>
+          <h3>Dashboard & Reporting</h3>
+          <p>Data visualization & insights with Power BI and Excel.</p>
+        </div>
+      </div>
+
+      <div class="fade-in" style="margin-top: var(--space-10);">
+        <div class="tool-categories">
+          <div class="tool-category">
+            <div class="tool-category-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                <path d="M2 2l7.586 7.586" />
+                <circle cx="11" cy="11" r="2" />
+              </svg>
+              <h4>Design & UI/UX</h4>
+            </div>
+            <div class="tags">
+              <span class="tag">Figma</span>
+              <span class="tag">Adobe Photoshop</span>
+              <span class="tag">Adobe Illustrator</span>
+              <span class="tag">Canva</span>
+            </div>
+          </div>
+          <div class="tool-category">
+            <div class="tool-category-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="23 7 16 12 23 17 23 7" />
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+              </svg>
+              <h4>Photo & Video</h4>
+            </div>
+            <div class="tags">
+              <span class="tag">Adobe Lightroom Classic</span>
+              <span class="tag">CapCut</span>
+            </div>
+          </div>
+          <div class="tool-category">
+            <div class="tool-category-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+              <h4>Data & Development</h4>
+            </div>
+            <div class="tags">
+              <span class="tag">Microsoft Power BI</span>
+              <span class="tag">Microsoft Excel</span>
+            </div>
+          </div>
+          <div class="tool-category">
+            <div class="tool-category-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+              </svg>
+              <h4>Productivity</h4>
+            </div>
+            <div class="tags">
+              <span class="tag">Microsoft PowerPoint</span>
+              <span class="tag">Google Slides</span>
+              <span class="tag">Google Sheets</span>
+              <span class="tag">Microsoft Word</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools I Usually Use -->
+      <div class="fade-in" style="margin-top: var(--space-12);">
+        <div class="tool-category-header" style="justify-content: center; margin-bottom: var(--space-6);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+            <line x1="8" y1="21" x2="16" y2="21" />
+            <line x1="12" y1="17" x2="12" y2="21" />
+          </svg>
+          <h4 style="font-size: 1rem; font-weight: 600;">Tools I Usually Use</h4>
+        </div>
+
+        <div class="tools-marquee">
+          <div class="tools-track">
+
+            <div class="tool-item"><Image src={getImage("Adobe_Photoshop_CC_icon.svg.png")} alt="Photoshop" /><span>Photoshop</span></div>
+            <div class="tool-item"><Image src={getImage("Adobe_Photoshop_Lightroom_Classic_CC_icon.svg.png")} alt="Lightroom" /><span>Lightroom</span></div>
+            <div class="tool-item"><Image src={getImage("Adobe_Illustrator_CC_icon.svg.png")} alt="Illustrator" /><span>Illustrator</span></div>
+            <div class="tool-item"><Image src={getImage("figma.png.webp")} alt="Figma" /><span>Figma</span></div>
+            <div class="tool-item"><Image src={getImage("capcut.png.webp")} alt="CapCut" /><span>CapCut</span></div>
+            <div class="tool-item"><Image src={getImage("canva.svg")} alt="Canva" /><span>Canva</span></div>
+            <div class="tool-item"><Image src={getImage("New_Power_BI_Logo.svg-2.png")} alt="Power BI" /><span>Power BI</span></div>
+            <div class="tool-item"><Image src={getImage("Google_Slides_Logo_512px.png")} alt="Slides" /><span>Slides</span></div>
+            <div class="tool-item"><Image src={getImage("Google_Sheets_Logo_512px.png")} alt="Sheets" /><span>Sheets</span></div>
+            <div class="tool-item"><Image src={getImage("Microsoft_Office_PowerPoint.svg.png")} alt="PowerPoint" /><span>PowerPoint</span></div>
+
+            <div class="tool-item"><Image src={getImage("Adobe_Photoshop_CC_icon.svg.png")} alt="Photoshop" /><span>Photoshop</span></div>
+            <div class="tool-item"><Image src={getImage("Adobe_Photoshop_Lightroom_Classic_CC_icon.svg.png")} alt="Lightroom" /><span>Lightroom</span></div>
+            <div class="tool-item"><Image src={getImage("Adobe_Illustrator_CC_icon.svg.png")} alt="Illustrator" /><span>Illustrator</span></div>
+            <div class="tool-item"><Image src={getImage("figma.png.webp")} alt="Figma" /><span>Figma</span></div>
+            <div class="tool-item"><Image src={getImage("capcut.png.webp")} alt="CapCut" /><span>CapCut</span></div>
+            <div class="tool-item"><Image src={getImage("canva.svg")} alt="Canva" /><span>Canva</span></div>
+            <div class="tool-item"><Image src={getImage("New_Power_BI_Logo.svg-2.png")} alt="Power BI" /><span>Power BI</span></div>
+            <div class="tool-item"><Image src={getImage("Google_Slides_Logo_512px.png")} alt="Slides" /><span>Slides</span></div>
+            <div class="tool-item"><Image src={getImage("Google_Sheets_Logo_512px.png")} alt="Sheets" /><span>Sheets</span></div>
+            <div class="tool-item"><Image src={getImage("Microsoft_Office_PowerPoint.svg.png")} alt="PowerPoint" /><span>PowerPoint</span></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" aria-labelledby="experience-heading">
+    <div class="container">
+      <div class="fade-in" style="margin-bottom: var(--space-10); max-width: var(--content-default);">
+        <div class="section-label">Education</div>
+        <h2 id="experience-heading" class="section-title">Educational <em>Background</em></h2>
+      </div>
+
+      <div class="education-layout">
+        <article class="education-profile fade-in">
+          <div>
+            <div class="education-kicker">Undergraduate</div>
+            <p class="education-period">2023 — Expected 2026</p>
+            <h3 class="education-school">Khon Kaen University</h3>
+            <p class="education-degree">Faculty of Humanities and Social Sciences · Bachelor of Information Science</p>
+          </div>
+          <p class="education-note">Open to internship opportunities where information, people, and creative digital
+            communication meet.</p>
+        </article>
+
+        <div class="education-stats fade-in" style="transition-delay: 80ms;">
+          <div class="education-stat">
+            <span class="education-stat-label">Current Year</span>
+            <strong class="education-stat-value">4th Year</strong>
+          </div>
+          <div class="education-stat">
+            <span class="education-stat-label">Graduation</span>
+            <strong class="education-stat-value">2026</strong>
+          </div>
+          <div class="education-stat">
+            <span class="education-stat-label">Status</span>
+            <strong class="education-stat-value">Open to Internship</strong>
+          </div>
+          <div class="education-stat">
+            <span class="education-stat-label">GPAX</span>
+            <strong class="education-stat-value">3.64</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="portfolio" class="work-experience" aria-labelledby="portfolio-heading">
+    <div class="container">
+      <div class="fade-in" style="margin-bottom: var(--space-10);">
+        <div class="section-label">Experience</div>
+        <h2 id="portfolio-heading" class="section-title">Experience</h2>
+      </div>
+
+      <div class="work-experience-list">
+        <div class="experience-subsection fade-in">
+          <div class="experience-subsection-header">
+            <h3 class="experience-subsection-title">Professional Experience</h3>
+            <span class="experience-subsection-line"></span>
+          </div>
+
+          <article class="work-experience-card">
+            <div class="work-experience-card-inner">
+              <div class="work-exp-info">
+                <!-- <div class="work-exp-header">
+                  <span class="work-exp-date">Aug 2025 - Jan 2026</span>
+                </div> -->
+                <h3 class="work-exp-role">Showcase 8th 2026 (Event)</h3>
+                <p class="work-exp-company">Media Production Officer</p>
+                <ul class="work-exp-achievements">
+                  <li>Created the storyboard, script, and visual concept for the event's opening video to catch people's
+                    interest.</li>
+                  <li>Designed content hooks that caught people's attention, receiving <strong
+                      style="color: var(--color-accent);">3,678 organic views and 95 likes</strong> on the Instagram
+                    public page.</li>
+                  <li>Ensured all visual content aligned with the core theme and concept.</li>
+                </ul>
+              </div>
+              <div class="work-exp-media">
+                <div>
+                  <p class="work-exp-media-label">Opening Video</p>
+                  <div class="work-exp-video-frame">
+	                    <iframe
+	                      src="https://player.cloudinary.com/embed/?cloud_name=dpasph0qe&public_id=%E0%B8%84%E0%B8%A5%E0%B8%B4%E0%B8%9B%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%82%E0%B8%A1%E0%B8%97_rev.6_%E0%B8%9B%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%81%E0%B8%81%E0%B9%89%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%AA%E0%B8%B8%E0%B8%94_zi1h9w&fluid=true&controls=true&source_types%5B%5D=mp4"
+	                      allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+	                      loading="lazy"
+	                      title="Showcase 8th Opening Video"></iframe>
+	                  </div>
+	                  <p class="embed-fallback">
+	                    Video not loading?
+	                    <a href="https://player.cloudinary.com/embed/?cloud_name=dpasph0qe&public_id=%E0%B8%84%E0%B8%A5%E0%B8%B4%E0%B8%9B%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%82%E0%B8%A1%E0%B8%97_rev.6_%E0%B8%9B%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%81%E0%B8%81%E0%B9%89%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%AA%E0%B8%B8%E0%B8%94_zi1h9w&fluid=true&controls=true&source_types%5B%5D=mp4" target="_blank" rel="noopener noreferrer">
+	                      Open the video
+	                    </a>.
+	                  </p>
+	                </div>
+                <div>
+                  <p class="work-exp-media-label">Poster 1</p>
+                  <div class="work-exp-media-content">
+                    <Image src={getImage("showcase.jpg")} alt="Showcase 8th Poster 1" loading="lazy" width={768} widths={[320, 480, 640, 768]} sizes="(max-width: 768px) 100vw, 40vw" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-experience-card">
+            <div class="work-experience-card-inner work-experience-card-inner--single">
+              <div class="work-exp-info">
+                <!-- <div class="work-exp-header">
+                  <span class="work-exp-date">May - Aug 2025</span>
+                </div> -->
+                <h3 class="work-exp-role">iTalk 7 2025 (Event)</h3>
+                <p class="work-exp-company">Public Relations Officer</p>
+                <ul class="work-exp-achievements">
+                  <li>Planned communication strategies to connect senior and junior students at the faculty level.</li>
+                  <li>Wrote engaging captions and social media posts.</li>
+                  <li>Developed promotional strategies to build a good community and invite people to join the event.
+                  </li>
+                </ul>
+              </div>
+              <div class="work-exp-media-grid work-exp-media-grid--two">
+                <div class="work-exp-media-content">
+                  <Image src={getImage("iTalk-1.jpg")} alt="iTalk 7 Example Post" loading="lazy" width={768} widths={[320, 480, 640, 768]} sizes="(max-width: 768px) 100vw, 40vw" />
+                </div>
+                <div class="work-exp-media-content">
+                  <Image src={getImage("iTalk-3.jpg")} alt="iTalk 7 Description" loading="lazy" width={768} widths={[320, 480, 640, 768]} sizes="(max-width: 768px) 100vw, 40vw" />
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-experience-card">
+            <div class="work-experience-card-inner work-experience-card-inner--single">
+              <div class="work-exp-info">
+                <!-- <div class="work-exp-header">
+                  <span class="work-exp-date">Oct 2024 - Sep 2025</span>
+                </div> -->
+                <h3 class="work-exp-role">MobiLib Gen 4</h3>
+                <p class="work-exp-company">Digital Strategist · Simulated Enterprise</p>
+                <ul class="work-exp-achievements">
+                  <li>Analyzed audience needs to plan effective communication and digital marketing strategies.</li>
+                  <li>Created engaging digital content to promote events and drive audience interaction.</li>
+                  <li>Developed online strategies to successfully increase followers and reach on social media platforms.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-experience-card">
+            <div class="work-experience-card-inner work-experience-card-inner--single">
+              <div class="work-exp-info" style="padding-bottom: var(--space-5);">
+                <h3 class="work-exp-role">Khon Kaen University Library</h3>
+                <p class="work-exp-company">Graphic Designer</p>
+                <ul class="work-exp-achievements">
+                  <li>Designed modern graphics to promote a new AI system called "Archi", the library's AI agent.</li>
+                  <li>Designed visual elements such as color schemes, typography, and layouts to promote this AI system.
+                  </li>
+                  <li>Developed the visual concept and graphic style to align with the organization's identity and
+                    translate AI technology into easy-to-understand posters for everyone.</li>
+                </ul>
+              </div>
+              <div class="work-exp-media-grid">
+                <div class="work-exp-media-content">
+                  <Image src={getImage("4.jpg")} alt="ARCHi AI Archives overview graphic" loading="lazy" width={640} widths={[320, 480, 640]} sizes="(max-width: 768px) 100vw, 30vw" />
+                </div>
+                <div class="work-exp-media-content">
+                  <Image src={getImage("2.jpg")} alt="KKU Archives AI Agent promotional graphic" loading="lazy" width={640} widths={[320, 480, 640]} sizes="(max-width: 768px) 100vw, 30vw" />
+                </div>
+                <div class="work-exp-media-content">
+                  <Image src={getImage("3.jpg")} alt="KKU Archives AI Media Hub promotional graphic" loading="lazy" width={640} widths={[320, 480, 640]} sizes="(max-width: 768px) 100vw, 30vw" />
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="experience-subsection fade-in">
+          <div class="experience-subsection-header">
+            <h3 class="experience-subsection-title">Academic Project</h3>
+            <span class="experience-subsection-line"></span>
+          </div>
+
+          <article class="work-experience-card">
+            <div class="work-experience-card-inner work-experience-card-inner--stacked">
+              <div class="work-exp-info">
+                <!-- <div class="work-exp-header">
+                  <span class="work-exp-date">May 2025 - Feb 2026</span>
+                </div> -->
+                <h3 class="work-exp-role">Restaurant Search Platform · KKU</h3>
+                <p class="work-exp-company">UX/UI Designer &amp; Prototype Developer</p>
+                <ul class="work-exp-achievements">
+                  <li>Designed a prototype platform focusing on a smooth user journey.</li>
+                  <li>Built a complete user flow and interface with interaction design using Figma.</li>
+                </ul>
+              </div>
+              <div class="academic-project-media">
+                <div class="academic-media-item">
+                  <p class="work-exp-media-label">Project Poster</p>
+                  <div class="academic-poster-frame">
+                    <Image src={getImage("DS_Poster-Final_page-0001 (1).jpg")} alt="Restaurant Search Platform KKU project poster" loading="lazy" width={768} widths={[320, 480, 640, 768]} sizes="(max-width: 768px) 100vw, 40vw" />
+                  </div>
+                </div>
+                <div class="academic-media-item">
+                  <p class="work-exp-media-label">Figma Prototype</p>
+                  <div class="work-exp-figma-frame">
+	                    <iframe
+	                      src="https://embed.figma.com/proto/QtVABLRb8PNhDsgOwU9VxJ/DS?node-id=207-404&p=f&scaling=scale-down&content-scaling=fixed&page-id=9%3A7&starting-point-node-id=207%3A404&embed-host=share&hide-ui=1&device=0"
+	                      allow="fullscreen" loading="lazy" title="Restaurant Search Platform KKU - Figma Prototype"></iframe>
+	                  </div>
+	                  <p class="embed-fallback">
+	                    Prototype not loading?
+	                    <a href="https://www.figma.com/proto/QtVABLRb8PNhDsgOwU9VxJ/DS?node-id=207-404&p=f&scaling=scale-down&content-scaling=fixed&page-id=9%3A7&starting-point-node-id=207%3A404" target="_blank" rel="noopener noreferrer">
+	                      Open the Figma prototype
+	                    </a>.
+	                  </p>
+	                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights Section -->
+  <section id="highlights">
+    <div class="container">
+      <div class="highlights-header fade-in" style="margin-bottom: var(--space-10);">
+        <div class="section-label">Part Time</div>
+        <h2 class="section-title">Creative <em>Works</em></h2>
+        <p class="section-desc">Before and after photo editing.</p>
+      </div>
+      <div class="highlights-grid">
+        <div class="highlight-card fade-in">
+          <img-comparison-slider class="comparison-slider" value="50"
+            aria-label="Before and after image comparison: Portrait Skin Tone Correction">
+            <picture slot="before">
+              <Image src={getImage("DSC04801-1.jpg")} alt="Edited portrait photo after skin tone correction" loading="lazy" decoding="async" width={900} widths={[360, 540, 720, 900]} sizes="(max-width: 768px) 100vw, 50vw" />
+            </picture>
+            <picture slot="after">
+              <Image src={getImage("DSC04801.jpg")} alt="Original portrait photo before skin tone correction" loading="lazy" decoding="async" width={900} widths={[360, 540, 720, 900]} sizes="(max-width: 768px) 100vw, 50vw" />
+            </picture>
+          </img-comparison-slider>
+          <!-- <span class="comparison-label comparison-label--after">AFTER</span>
+          <span class="comparison-label comparison-label--before">BEFORE</span>
+          <div class="highlight-card-content">
+            <h3>Portrait Skin Tone Correction</h3>
+          </div> -->
+        </div>
+        <div class="highlight-card fade-in" style="transition-delay: 50ms;">
+          <img-comparison-slider class="comparison-slider" value="50"
+            aria-label="Before and after image comparison: Portrait Red Lanterns">
+            <picture slot="before">
+              <Image src={getImage("DSC09156-1.jpg")} alt="Edited portrait with red lanterns after color grading" loading="lazy" decoding="async" width={900} widths={[360, 540, 720, 900]} sizes="(max-width: 768px) 100vw, 50vw" />
+            </picture>
+            <picture slot="after">
+              <Image src={getImage("DSC09156.jpg")} alt="Original portrait with red lanterns before editing" loading="lazy" decoding="async" width={900} widths={[360, 540, 720, 900]} sizes="(max-width: 768px) 100vw, 50vw" />
+            </picture>
+          </img-comparison-slider>
+          <!--
+          <span class="comparison-label comparison-label--after">AFTER</span>
+          <span class="comparison-label comparison-label--before">BEFORE</span>
+          <div class="highlight-card-content">
+            <h3>Portrait Red Lanterns</h3>
+          </div> -->
+        </div>
+        <div class="highlight-card fade-in" style="transition-delay: 100ms;">
+          <img-comparison-slider class="comparison-slider" value="50"
+            aria-label="Before and after image comparison: Landscape Highlight Recovery">
+            <picture slot="before">
+              <Image src={getImage("DSC00908-1.jpg")} alt="Edited landscape photo after highlight recovery" loading="lazy" decoding="async" width={900} widths={[360, 540, 720, 900]} sizes="(max-width: 768px) 100vw, 50vw" />
+            </picture>
+            <picture slot="after">
+              <Image src={getImage("DSC00908.jpg")} alt="Original landscape photo before highlight recovery" loading="lazy" decoding="async" width={900} widths={[360, 540, 720, 900]} sizes="(max-width: 768px) 100vw, 50vw" />
+            </picture>
+          </img-comparison-slider>
+          <!-- <span class="comparison-label comparison-label--after">AFTER</span>
+          <span class="comparison-label comparison-label--before">BEFORE</span>
+          <div class="highlight-card-content">
+            <h3>Landscape Highlight Recovery</h3>
+          </div> -->
+        </div>
+        <div class="highlight-card fade-in" style="transition-delay: 150ms;">
+          <img-comparison-slider class="comparison-slider" value="50"
+            aria-label="Before and after image comparison: Cinematic Color Grading">
+            <picture slot="before">
+              <Image src={getImage("DSC07085-1.jpg")} alt="Edited photo after cinematic color grading" loading="lazy" decoding="async" width={900} widths={[360, 540, 720, 900]} sizes="(max-width: 768px) 100vw, 50vw" />
+            </picture>
+            <picture slot="after">
+              <Image src={getImage("DSC07085.jpg")} alt="Original photo before cinematic color grading" loading="lazy" decoding="async" width={900} widths={[360, 540, 720, 900]} sizes="(max-width: 768px) 100vw, 50vw" />
+            </picture>
+          </img-comparison-slider>
+          <!--
+          <span class="comparison-label comparison-label--after">AFTER</span>
+          <span class="comparison-label comparison-label--before">BEFORE</span>
+          <div class="highlight-card-content">
+            <h3>Cinematic Color Grading</h3>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates">
+    <div class="container">
+      <div class="fade-in" style="margin-bottom: var(--space-10);">
+        <div class="section-label">Certificates</div>
+        <h2 class="section-title">Recognitions &<br><em>Certificates</em></h2>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card fade-in">
+          <div class="cert-image" style="position: relative;">
+            <Image src={getImage("Cert1.png")} alt="Become a UX/UI Designer Certificate" loading="lazy" width={640} widths={[320, 480, 640]} sizes="(max-width: 768px) 100vw, 33vw" />
+            <span class="cert-badge">KKU</span>
+          </div>
+          <div class="cert-content">
+            <h3 class="cert-title">Become a UX/UI Designer</h3>
+          </div>
+        </div>
+        <div class="cert-card fade-in" style="transition-delay: 50ms;">
+          <div class="cert-image" style="position: relative;">
+            <Image src={getImage("Cert2.png")} alt="Data Analytics Certificate" loading="lazy" width={640} widths={[320, 480, 640]} sizes="(max-width: 768px) 100vw, 33vw" />
+            <span class="cert-badge">KKU</span>
+          </div>
+          <div class="cert-content">
+            <h3 class="cert-title">เสริมทักษะ Data Analytics</h3>
+          </div>
+        </div>
+        <div class="cert-card fade-in" style="transition-delay: 100ms;">
+          <div class="cert-image" style="position: relative;">
+            <Image src={getImage("Cert3.JPG")} alt="Information and Knowledge Organization Certificate" loading="lazy" width={640} widths={[320, 480, 640]} sizes="(max-width: 768px) 100vw, 33vw" />
+            <span class="cert-badge">KKU</span>
+          </div>
+          <div class="cert-content">
+            <h3 class="cert-title">Information and Knowledge Organization: IKO</h3>
+          </div>
+        </div>
+        <div class="cert-card fade-in" style="transition-delay: 150ms;">
+          <div class="cert-image" style="position: relative;">
+            <Image src={getImage("Cert4.JPG")} alt="Western Table Etiquette Certificate" loading="lazy" width={640} widths={[320, 480, 640]} sizes="(max-width: 768px) 100vw, 33vw" />
+            <span class="cert-badge">KKU</span>
+          </div>
+          <div class="cert-content">
+            <h3 class="cert-title">การอบรม Western Table Etiquette</h3>
+          </div>
+        </div>
+        <div class="cert-card fade-in" style="transition-delay: 200ms;">
+          <div class="cert-image" style="position: relative;">
+            <Image src={getImage("Cert5.JPG")} alt="MobiLib 4th Generation 2025 Certificate" loading="lazy" width={640} widths={[320, 480, 640]} sizes="(max-width: 768px) 100vw, 33vw" />
+            <span class="cert-badge">KKU</span>
+          </div>
+          <div class="cert-content">
+            <h3 class="cert-title">MobiLib 4th Generation 2025</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities">
+    <div class="container">
+      <div class="fade-in" style="margin-bottom: var(--space-10);">
+        <div class="section-label">Activities</div>
+        <h2 class="section-title">Activities &<br><em>Involvement</em></h2>
+      </div>
+
+      <div class="activities-grid">
+        <article class="activity-card fade-in">
+          <div class="activity-image">
+            <Image src={getImage("Ac1.jpg")} alt="The Ultimate Career Launchpad activity" loading="lazy" width={640} widths={[320, 480, 640]} sizes="(max-width: 768px) 100vw, 33vw" />
+          </div>
+          <div class="activity-content">
+            <p class="activity-meta">Faculty of Informatics · 2023 – 2024</p>
+            <h3 class="activity-title">The Ultimate Career Launchpad</h3>
+          </div>
+        </article>
+
+        <article class="activity-card fade-in" style="transition-delay: 50ms;">
+          <div class="activity-image">
+            <Image src={getImage("Ac2.jpeg")} alt="Showcase 8th activity" loading="lazy" width={640} widths={[320, 480, 640]} sizes="(max-width: 768px) 100vw, 33vw" />
+          </div>
+          <div class="activity-content">
+            <p class="activity-meta">Khon Kaen University · 2022</p>
+            <h3 class="activity-title">Showcase 8th</h3>
+          </div>
+        </article>
+
+        <article class="activity-card fade-in" style="transition-delay: 100ms;">
+          <div class="activity-image">
+            <Image src={getImage("Ac3.jpg")} alt="iTalk 7 activity" loading="lazy" width={640} widths={[320, 480, 640]} sizes="(max-width: 768px) 100vw, 33vw" />
+          </div>
+          <div class="activity-content">
+            <p class="activity-meta">Khon Kaen University · Mar 2024</p>
+            <h3 class="activity-title">iTalk 7</h3>
+          </div>
+        </article>
+
+        <article class="activity-card fade-in" style="transition-delay: 150ms;">
+          <div class="activity-image">
+            <Image src={getImage("Ac4-1.jpg")} alt="iSchool CAMP activity" loading="lazy" width={640} widths={[320, 480, 640]} sizes="(max-width: 768px) 100vw, 33vw" />
+          </div>
+          <div class="activity-content">
+            <p class="activity-meta">Faculty of Informatics · 2023</p>
+            <h3 class="activity-title">iSchool CAMP</h3>
+          </div>
+        </article>
+
+        <article class="activity-card fade-in" style="transition-delay: 200ms;">
+          <div class="activity-image">
+            <Image src={getImage("Ac5-1.jpg")} alt="KKU CARNIVAL activity" loading="lazy" width={640} widths={[320, 480, 640]} sizes="(max-width: 768px) 100vw, 33vw" />
+          </div>
+          <div class="activity-content">
+            <p class="activity-meta">Khon Kaen University · 2023</p>
+            <h3 class="activity-title">KKU CARNIVAL</h3>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+<script>
+  import 'img-comparison-slider';
+</script>
